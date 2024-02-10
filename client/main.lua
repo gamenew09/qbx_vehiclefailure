@@ -64,7 +64,6 @@ local function cleanVehicle(veh)
 		SetVehicleUndriveable(veh, false)
 		WashDecalsFromVehicle(veh, 1.0)
 		TriggerServerEvent('qb-vehiclefailure:server:removewashingkit', veh)
-		TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["cleaningkit"], "remove")
 		ClearAllPedProps(cache.ped)
 		ClearPedTasks(cache.ped)
 	else -- if canceled
